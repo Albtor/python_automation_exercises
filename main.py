@@ -19,3 +19,6 @@ if __name__ == '__main__':
     # datalibraries.pandas_test()
     # datalibraries.sklearn_test()
 
+    # Machine Learning
+    machinelearning.machine_learning()
+
