@@ -17,5 +17,5 @@ def rename_files_in_directory(directory_path):
 
 
 if __name__ == '__main__':
-    directory = r'.\img'
+    directory = r'.\resources\img'
     rename_files_in_directory(directory)

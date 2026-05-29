@@ -29,3 +29,18 @@ model = RandomForestClassifier(n_estimators=100, random_state=42)
 
 # Train Model
 model.fit(X_train, y_train)
+
+# Predictions
+y_pred = model.predict(X_test)
+
+#Evaluations
+accuracy = accuracy_score(y_test, y_pred)
+print(f'accuracy: {accuracy*100:.2f}%')
+
+feature_importance = model.feature_importances_
+features = X.columns
+plt.bar(features, feature_importance)
+plt.title('Feature Importance')
+plt.xlabel('Features')
+plt.ylabel('Importance')
+plt.show()
