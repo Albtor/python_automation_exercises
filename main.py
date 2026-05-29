@@ -1,11 +1,21 @@
+import datalibraries
+import filerenaming
+import machinelearning
+import scheduler
+import webscraping
 
 
-def print_hi(name):
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('Python Exercises')
+    #Modify files
+    # directory = r'.\resources\img'
+    # filerenaming.rename_files_in_directory(directory)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    #Webscrapping
+    webscraping.fetch_links('https://www.marca.com/')
+    webscraping.retrieve_tags('https://www.eldia.es/', 'h1')
+
+    # Datalibraries
+    # datalibraries.numpy_test()
+    # datalibraries.pandas_test()
+    # datalibraries.sklearn_test()
+

@@ -23,8 +23,8 @@ def retrieve_tags(url, tag):
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    fetch_links('https://www.marca.com/')
-    retrieve_tags('https://www.eldia.es/', 'h1')
+# if __name__ == '__main__':
+#     fetch_links('https://www.marca.com/')
+#     retrieve_tags('https://www.eldia.es/', 'h1')
 
 

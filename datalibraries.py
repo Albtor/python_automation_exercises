@@ -33,7 +33,7 @@ def sklearn_test():
     print(f"Accuracy: {score * 100:.2f}%")
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    numpy_test()
-    pandas_test()
-    sklearn_test()
+# if __name__ == '__main__':
+#     numpy_test()
+#     pandas_test()
+#     sklearn_test()

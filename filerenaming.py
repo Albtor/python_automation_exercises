@@ -16,6 +16,6 @@ def rename_files_in_directory(directory_path):
             print(f"Skipped: {file} (not an image file ")
 
 
-if __name__ == '__main__':
-    directory = r'.\resources\img'
-    rename_files_in_directory(directory)
+# if __name__ == '__main__':
+#     directory = r'.\resources\img'
+#     rename_files_in_directory(directory)
