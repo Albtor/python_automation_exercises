@@ -44,6 +44,12 @@ def datapreprocessing(file_path):
     sales_data[['age','income','sales_value']] = scaler.fit_transform(sales_data[['age','income','sales_value']])
     sales_data_encoded = pd.get_dummies(sales_data, columns=['product_type'], drop_first=True)
 
+    # Encoding Categorical Data
+    sales_data_encoded = pd.get_dummies(sales_data, columns=['product_type'], drop_first=True)
+
+    # Final Processed data
+    print(sales_data_encoded.head())
+
 
 
 
