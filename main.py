@@ -11,8 +11,8 @@ if __name__ == '__main__':
     # filerenaming.rename_files_in_directory(directory)
 
     #Webscrapping
-    webscraping.fetch_links('https://www.marca.com/')
-    webscraping.retrieve_tags('https://www.eldia.es/', 'h1')
+    # webscraping.fetch_links('https://www.marca.com/')
+    # webscraping.retrieve_tags('https://www.eldia.es/', 'h1')
 
     # Datalibraries
     # datalibraries.numpy_test()
@@ -20,5 +20,8 @@ if __name__ == '__main__':
     # datalibraries.sklearn_test()
 
     # Machine Learning
-    machinelearning.machine_learning()
+    # machinelearning.machine_learning()
+
+    # Data Preprocessing
+    datapreprocessing()
 

@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 
 
-def datapreprocessing(file_path):
+def datapreprocessing():
     # Removing missing data
     file_path = r'.\resources\sales_data.csv'
     data = pd.read_csv(file_path)
