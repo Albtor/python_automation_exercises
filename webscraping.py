@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup #pip install requests beautifulsoup4
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 
+# Beautifulsoup for static html
 def fetch_links(url):
     response = requests.get(url)
     if response.status_code == 200:
@@ -21,10 +25,18 @@ def retrieve_tags(url, tag):
     else:
         print("Failed to retrieve the webpage")
 
+#
+# prices = soup.find_all('span', class_='product-price')
+#
 
-# Press the green button in the gutter to run the script.
-# if __name__ == '__main__':
-#     fetch_links('https://www.marca.com/')
-#     retrieve_tags('https://www.eldia.es/', 'h1')
 
+# Selenium: Dynamic sites | pip install selenium
+def Selenium():
+    driver = webdriver.Chrome(executable_path='/path/to/chromedriver')
+    driver.get('https://www.as.com')
+    time.sleep(3)
+    prices = driver.find_elements(By.CLASS_NAME, 'product-price')
+    for price in prices:
+        print(price.text)
+    driver.quit()
 
