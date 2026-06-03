@@ -3,7 +3,8 @@ import filerenaming
 import machinelearning
 import scheduler
 import webscraping
-
+from datapreprocessing import datapreprocessing
+from emailautomate import send_email_report
 
 if __name__ == '__main__':
     #Modify files
@@ -25,3 +26,5 @@ if __name__ == '__main__':
     # Data Preprocessing
     datapreprocessing()
 
+    # Automate
+    # send_email_report()
