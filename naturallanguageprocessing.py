@@ -30,3 +30,8 @@ def nlp_exercise():
         doc = nlp(text.lower())
         tokens = [token.text for token in doc if not token.is_stop and not token.is_punct]
         print(f"Tokens: {tokens}")
+
+    for text in feedback:
+        blob = TextBlob(text)
+        sentiment = "Positive" if blob.sentiment.polarity > 0 else "Negative" if blob.sentiment.polarity < 0 else "Neutral"
+        print(f"Feedback:{text}\\Sentiment: {sentiment}\n")

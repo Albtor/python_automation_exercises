@@ -1,0 +1,11 @@
+age,account_type,usage,churn
+22,Basic,Low,
+35,Premium,High,
+28,Standard,Medium,
+45,Premium,Medium,
+31,Basic,High,
+52,Standard,Low,
+26,Premium,High,
+39,Basic,Medium,
+47,Standard,High,
+29,Premium,Low,
