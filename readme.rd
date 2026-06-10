@@ -1,4 +1,5 @@
 Python project with multiple methods and exercises on AI, automation
+# .venv312\Scripts\activate
 1-
 2-
 3-
@@ -13,3 +14,4 @@ Python project with multiple methods and exercises on AI, automation
 12-
 13-
 14-computervision
+15-voicerecognition
