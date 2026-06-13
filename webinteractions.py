@@ -11,3 +11,14 @@ def selenium_example():
 
 def filling_forms():
     driver = webdriver.Chrome(executable_path='/path/to/chromedriver')
+    driver.get('https://www.google.com')
+    username = driver.find_elements(By.NAME, 'username')
+    password = driver.find_elements(By.NAME, 'password')
+
+    username.send_keys('myusername')
+    password.send_keys('mypassword')
+    password.send_keys(Keys.RETURN)
+
+    login_button = driver.find_elements(By.XPATH, '//button[@type="submit"]')
+    login_button.click()
+    driver.quit()
