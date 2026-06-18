@@ -38,5 +38,14 @@ def order_fulfillment_automation():
             print("Order cannot be processed due to insufficient stock")
         process_order(product, quantity)
 
-    def predict_demand():
+    def predict_demand(product):
         predicted_demand = random.randint(5,15)
+        print(f"Predicted demand for {product}: {predicted_demand}")
+        current_stock = inventory[inventory['Product'] == product]['Stock'].values[0]
+
+        if current_stock < predicted_demand:
+            print(f"Warning: Stock is insufficient for predicted demand. Consider Restocking")
+        else:
+            print(f" Stock level is sufficient to meet predicted demand.")
+
+    predict_demand(product)

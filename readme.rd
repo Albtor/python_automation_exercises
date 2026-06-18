@@ -19,3 +19,5 @@ Python project with multiple methods and exercises on AI, automation
 17-webbrowsing
 18-dataanalysisandreporting
 19-automationbusinesoperations
+20-CloudAutomation
+21-integrationwithiot
