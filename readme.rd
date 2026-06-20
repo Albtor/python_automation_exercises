@@ -21,3 +21,4 @@ Python project with multiple methods and exercises on AI, automation
 19-automationbusinesoperations
 20-CloudAutomation
 21-integrationwithiot
+22-dataengineering
