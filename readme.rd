@@ -23,3 +23,4 @@ Python project with multiple methods and exercises on AI, automation
 21-integrationwithiot
 22-dataengineering
 23-handlingerrors
+24-security
