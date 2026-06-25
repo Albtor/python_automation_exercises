@@ -1,7 +1,11 @@
+import datetime
 import os
 import pickle
+import time
 import google.auth
 from flask import Request
+from sqlalchemy.event.base import _HasEventsDispatch
+from tensorflow.python.autograph.pyct.cfg import build
 
 # from google_auth_oauthlib.flow import installed AppFlow
 # from googleapiclient.discovery import build
@@ -29,5 +33,20 @@ def oauth20_authentication():
         return creds
 
     def list_events():
-        print('Listing events')
+        creds = authenticate()
+        try:
+            service = build('calendar', 'v3', credentials=creds)
+            events_result = service.events().list(calendarId='primary', timeMin=datetime.datetime.utcnow().isoformat(),
+                                                  maxResults=10, singleEvents=True, orderBy='startTime').execute()
+            events = events_result.get('items', [])
+            if not events:
+                print('No upcoming events found.')
+                for event in events:
+                    start = event['start'].get('dateTime', events['start'].get('date'))
+                    print(f'{start}-{event["summary"]}')
+        except Exception as error:
+            print(f"An error occured: {error}")
+
+
+    list_events()
 
